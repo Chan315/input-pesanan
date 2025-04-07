@@ -1,1 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Pesanan</title>
+    <style>
+        body { font-family: sans-serif; max-width: 400px; margin: auto; padding-top: 50px; }
+        label { display: block; margin-top: 15px; }
+        input, select, button { width: 100%; padding: 8px; margin-top: 5px; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h2>Input Data Pesanan</h2>
+    {% if success %}
+    <p class="success">Data berhasil dikirim!</p>
+    {% endif %}
+    <form method="post">
+        <label for="menu">Menu:</label>
+        <select name="menu" required>
+            <option value="">-- Pilih Menu --</option>
+            <option value="VIP1">VIP1</option>
+            <option value="VIP2">VIP2</option>
+            <option value="Traffic">Traffic</option>
+            <option value="ID">ID</option>
+        </select>
 
+        <label for="link">Link + Anchor:</label>
+        <input type="url" name="link" required>
+
+        <label for="id_pemesan">ID Pemesan:</label>
+        <input type="text" name="id_pemesan" required>
+
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+</html>
